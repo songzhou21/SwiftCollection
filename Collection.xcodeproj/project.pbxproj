@@ -10,6 +10,9 @@
 		58C6B2BC24C578A200AED5FB /* Collection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58C6B2B224C578A200AED5FB /* Collection.framework */; };
 		58C6B2C124C578A200AED5FB /* CollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C6B2C024C578A200AED5FB /* CollectionTests.swift */; };
 		58C6B2C324C578A200AED5FB /* Collection.h in Headers */ = {isa = PBXBuildFile; fileRef = 58C6B2B524C578A200AED5FB /* Collection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		58C6B2CD24C578CE00AED5FB /* SortedSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C6B2CC24C578CE00AED5FB /* SortedSet.swift */; };
+		58C6B2CF24C5833700AED5FB /* SortedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C6B2CE24C5833700AED5FB /* SortedArray.swift */; };
+		58C6B2D124C5A2C100AED5FB /* SortedArrayTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C6B2D024C5A2C100AED5FB /* SortedArrayTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		58C6B2BB24C578A200AED5FB /* CollectionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58C6B2C024C578A200AED5FB /* CollectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTests.swift; sourceTree = "<group>"; };
 		58C6B2C224C578A200AED5FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58C6B2CC24C578CE00AED5FB /* SortedSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortedSet.swift; sourceTree = "<group>"; };
+		58C6B2CE24C5833700AED5FB /* SortedArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortedArray.swift; sourceTree = "<group>"; };
+		58C6B2D024C5A2C100AED5FB /* SortedArrayTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortedArrayTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				58C6B2B524C578A200AED5FB /* Collection.h */,
+				58C6B2CC24C578CE00AED5FB /* SortedSet.swift */,
+				58C6B2CE24C5833700AED5FB /* SortedArray.swift */,
 				58C6B2B624C578A200AED5FB /* Info.plist */,
 			);
 			path = Collection;
@@ -81,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				58C6B2C024C578A200AED5FB /* CollectionTests.swift */,
+				58C6B2D024C5A2C100AED5FB /* SortedArrayTest.swift */,
 				58C6B2C224C578A200AED5FB /* Info.plist */,
 			);
 			path = CollectionTests;
@@ -148,6 +157,7 @@
 				TargetAttributes = {
 					58C6B2B124C578A200AED5FB = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 					};
 					58C6B2BA24C578A200AED5FB = {
 						CreatedOnToolsVersion = 11.5;
@@ -195,6 +205,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58C6B2CF24C5833700AED5FB /* SortedArray.swift in Sources */,
+				58C6B2CD24C578CE00AED5FB /* SortedSet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58C6B2D124C5A2C100AED5FB /* SortedArrayTest.swift in Sources */,
 				58C6B2C124C578A200AED5FB /* CollectionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,6 +353,7 @@
 		58C6B2C724C578A200AED5FB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2484Z5XMVT;
@@ -356,6 +370,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.songzhou.Collection;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +379,7 @@
 		58C6B2C824C578A200AED5FB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2484Z5XMVT;
@@ -388,6 +404,7 @@
 		58C6B2CA24C578A200AED5FB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2484Z5XMVT;
 				INFOPLIST_FILE = CollectionTests/Info.plist;
@@ -406,6 +423,7 @@
 		58C6B2CB24C578A200AED5FB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2484Z5XMVT;
 				INFOPLIST_FILE = CollectionTests/Info.plist;
