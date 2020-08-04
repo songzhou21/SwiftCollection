@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58C48C2E24D9359900D340CE /* NSOrderedSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C48C2D24D9359900D340CE /* NSOrderedSet.swift */; };
+		58C48C3024D9475C00D340CE /* NSOrderedSetTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C48C2F24D9475C00D340CE /* NSOrderedSetTest.swift */; };
 		58C6B2BC24C578A200AED5FB /* Collection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58C6B2B224C578A200AED5FB /* Collection.framework */; };
 		58C6B2C124C578A200AED5FB /* CollectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C6B2C024C578A200AED5FB /* CollectionTests.swift */; };
 		58C6B2C324C578A200AED5FB /* Collection.h in Headers */ = {isa = PBXBuildFile; fileRef = 58C6B2B524C578A200AED5FB /* Collection.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		58C48C2D24D9359900D340CE /* NSOrderedSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSOrderedSet.swift; sourceTree = "<group>"; };
+		58C48C2F24D9475C00D340CE /* NSOrderedSetTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSOrderedSetTest.swift; sourceTree = "<group>"; };
 		58C6B2B224C578A200AED5FB /* Collection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Collection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		58C6B2B524C578A200AED5FB /* Collection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Collection.h; sourceTree = "<group>"; };
 		58C6B2B624C578A200AED5FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 				58C6B2B524C578A200AED5FB /* Collection.h */,
 				58C6B2CC24C578CE00AED5FB /* SortedSet.swift */,
 				58C6B2CE24C5833700AED5FB /* SortedArray.swift */,
+				58C48C2D24D9359900D340CE /* NSOrderedSet.swift */,
 				58C6B2B624C578A200AED5FB /* Info.plist */,
 			);
 			path = Collection;
@@ -90,6 +95,7 @@
 			children = (
 				58C6B2C024C578A200AED5FB /* CollectionTests.swift */,
 				58C6B2D024C5A2C100AED5FB /* SortedArrayTest.swift */,
+				58C48C2F24D9475C00D340CE /* NSOrderedSetTest.swift */,
 				58C6B2C224C578A200AED5FB /* Info.plist */,
 			);
 			path = CollectionTests;
@@ -205,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58C48C2E24D9359900D340CE /* NSOrderedSet.swift in Sources */,
 				58C6B2CF24C5833700AED5FB /* SortedArray.swift in Sources */,
 				58C6B2CD24C578CE00AED5FB /* SortedSet.swift in Sources */,
 			);
@@ -216,6 +223,7 @@
 			files = (
 				58C6B2D124C5A2C100AED5FB /* SortedArrayTest.swift in Sources */,
 				58C6B2C124C578A200AED5FB /* CollectionTests.swift in Sources */,
+				58C48C3024D9475C00D340CE /* NSOrderedSetTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
