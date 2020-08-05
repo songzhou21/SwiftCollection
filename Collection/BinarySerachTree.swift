@@ -33,6 +33,34 @@ extension BinaryTree: CustomStringConvertible {
 }
 
 public extension BinaryTree {
+    func contains(_ element: Element) -> Bool {
+        switch self {
+        case .empty:
+            return false
+        case .node(element, _, _):
+            return true
+        case let .node(value, left, _) where value > element:
+            return left.contains(element)
+        case let .node(_, _, right):
+            return right.contains(element)
+        }
+    }
+}
+
+public extension BinaryTree {
+    func forEach(_ body: (Element) -> Void) {
+        switch self {
+        case .empty:
+            break
+        case let .node(value, left, right):
+            left.forEach(body)
+            body(value)
+            right.forEach(body)
+        }
+    }
+}
+
+public extension BinaryTree {
     @discardableResult
     mutating func insert(_ element: Element) -> (inserted: Bool, memberAfterInsert: Element) {
         let (tree, old) = _inserting(element)

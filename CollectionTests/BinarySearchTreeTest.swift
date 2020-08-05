@@ -25,6 +25,8 @@ class BinarySearchTreeTest: XCTestCase {
                                                .node(3, .empty, .empty))
         
         print(smallTree)
+        
+        XCTAssert(smallTree.contains(2))
     }
 
     func testInsert() throws {
@@ -37,11 +39,22 @@ class BinarySearchTreeTest: XCTestCase {
         
         print(set)
         
-//        for i in (1...20).shuffled() {
-//            set.insert(i)
-//        }
-//            
-//        print(set)
+        for i in (1...20).shuffled() {
+            set.insert(i)
+        }
+            
+        print(set)
+    }
+    
+    func testForEach() {
+        var set = BinaryTree<Int>.empty
+        for i in (1...20).shuffled() {
+            set.insert(i)
+        }
+        
+        print(set)
+        
+        set.forEach { print($0) }
     }
     
     func testPerformanceExample() throws {
