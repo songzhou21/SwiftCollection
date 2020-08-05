@@ -37,6 +37,16 @@ class redBlackTreeTest: XCTestCase {
         print(bigTree)
     }
 
+    func testInsert() throws {
+        var set = RedBlackTree<Int>.empty
+        
+        for i in (1 ... 20).shuffled() {
+            set.insert(i)
+        }
+        
+        print(set)
+    }
+    
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         self.measure {

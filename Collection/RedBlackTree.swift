@@ -87,8 +87,7 @@ extension RedBlackTree {
 }
 
 extension RedBlackTree {
-    func _inserting(_ element: Element) -> (tree: RedBlackTree, old: Element?) 
-    {
+    func _inserting(_ element: Element) -> (tree: RedBlackTree, old: Element?) {
         switch self {
 
         case .empty:
@@ -113,13 +112,10 @@ extension RedBlackTree {
 extension RedBlackTree {
     func balanced(_ color: Color, _ value: Element, _ left: RedBlackTree, _ right: RedBlackTree) -> RedBlackTree {
         switch (color, value, left, right) {
-        case let (.black, z, .node(.red, y, .node(.red, x, a, b), c), d):
-            return .node(.red, y, .node(.black, x, a, b), .node(.black, z, c, d))
-        case let (.black, z, .node(.red, x, a, .node(.red, y, b, c)), d):
-            return .node(.red, y, .node(.black, x, a, b), .node(.black, z, c, d))
-        case let (.black, x, a, .node(.red, z, .node(.red, y, b, c), d)):
-            return .node(.red, y, .node(.black, x, a, b), .node(.black, z, c, d))
-        case let (.black, x, a, .node(.red, y, b, .node(.red, z, c, d))):
+        case let (.black, z, .node(.red, y, .node(.red, x, a, b), c), d),
+             let (.black, z, .node(.red, x, a, .node(.red, y, b, c)), d),
+             let (.black, x, a, .node(.red, z, .node(.red, y, b, c), d)),
+             let (.black, x, a, .node(.red, y, b, .node(.red, z, c, d))):
             return .node(.red, y, .node(.black, x, a, b), .node(.black, z, c, d))
         default:
             return .node(color, value, left, right)
